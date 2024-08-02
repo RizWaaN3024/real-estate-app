@@ -45,12 +45,13 @@ export const login = async (req, res) => {
     if (!isPasswordValid) {
       res.status(401).json({ message: "Invalid Credentials" });
     }
+
+    // Generate cookie token and send to the user
+    res.setHeader("Set-cookie", "test=" + "myValue")
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: "Failed to login" });
   }
-
-  // Generate cookie token and send to the user
 };
 
 export const logout = (req, res) => {
