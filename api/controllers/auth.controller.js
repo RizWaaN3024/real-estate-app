@@ -8,6 +8,8 @@ export const register = async (req, res) => {
     const hashPassword = await bcrypt.hash(password, 10);
     console.log(hashPassword)
     // After hashing create new user 
+
+    
 }
 
 export const login = (req, res) => {
