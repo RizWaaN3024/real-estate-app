@@ -45,7 +45,6 @@ export const login = async (req, res) => {
     if (!isPasswordValid) {
       res.status(401).json({ message: "Invalid Credentials" });
     }
-
     // Generate cookie token and send to the user
     res.setHeader("Set-cookie", "test=" + "myValue")
   } catch (error) {
